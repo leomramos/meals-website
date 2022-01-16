@@ -5,9 +5,10 @@ import {
   RandomMeal
 } from '../components';
 
-export const Home = ({ category }) => {
+export const Home = () => {
   const [randomMeal, setRandomMeal] = useState({});
   const [meals, setMeals] = useState([]);
+  const [category, setCategory] = useState('');
   console.log(randomMeal)
 
   useEffect(() => {

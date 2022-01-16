@@ -43,7 +43,7 @@ function App() {
         </Header>
       </div>
       <Routes>
-        <Route path="/" exact element={<Home category={'asdad'} />} />
+        <Route path="/" exact element={<Home />} />
         <Route path="/meal/:id" element={<Meal />} />
       </Routes>
     </Router>
