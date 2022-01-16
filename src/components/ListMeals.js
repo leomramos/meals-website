@@ -2,7 +2,7 @@ import React from 'react';
 import Styled from 'styled-components';
 
 import {
-  ShowMeal
+  MealCard
 } from '../components';
 
 const Container = Styled.section`
@@ -25,11 +25,22 @@ const Container = Styled.section`
   border-bottom: 3px solid gray;
 `
 
-export const RandomMeal = ({ meal }) => {
+const Wrapper = Styled.div`
+  flex-direction: ${({ column }) => column ? 'column' : 'unset'};
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+`
+
+export const ListMeals = ({ meals, category }) => {
   return (
     <Container id="random-meal">
-      <h1>Random Meal</h1>
-      <ShowMeal meal={meal} />
+      <h1>Meals List - {category}</h1>
+      <Wrapper>
+        {meals && meals.map(meal => (
+          <MealCard key={meal.idMeal} meal={meal} />
+        ))}
+      </Wrapper>
     </Container >
   )
 }

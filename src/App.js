@@ -37,7 +37,7 @@ function App() {
       <div className="App">
         <Header>
           <Link to={"/"}>
-            <img src="meal.png" alt="logo" id="logo" />
+            <img src="https://i.imgur.com/bt1lijv.png" alt="logo" id="logo" />
           </Link>
           Find the perfect meal for you
         </Header>

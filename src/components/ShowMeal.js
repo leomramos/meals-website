@@ -27,20 +27,17 @@ const WatchVideo = Styled.a`
 
 export const ShowMeal = ({ meal }) => {
   return (
-    <>
-      <h1>Random Meal</h1>
-      <Wrapper>
-        <Wrapper column>
-          <img src={meal.strMealThumb} alt="random-meal-thumb" />
-          <WatchVideo href={meal.strYoutube} target="__blank">
-            Watch the video
-          </WatchVideo>
-        </Wrapper>
-        <MealInfo>
-          <h3>{meal.strMeal}</h3>
-          <pre dangerouslySetInnerHTML={{ __html: meal.strInstructions }} />
-        </MealInfo>
+    <Wrapper>
+      <Wrapper column>
+        <img src={meal.strMealThumb} alt="random-meal-thumb" />
+        <WatchVideo href={meal.strYoutube} target="__blank">
+          Watch the video
+        </WatchVideo>
       </Wrapper>
-    </>
+      <MealInfo>
+        <h3>{meal.strMeal}</h3>
+        <pre dangerouslySetInnerHTML={{ __html: meal.strInstructions }} />
+      </MealInfo>
+    </Wrapper>
   )
 }
